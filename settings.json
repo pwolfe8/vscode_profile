@@ -1,0 +1,17 @@
+{
+    "window.zoomLevel": -1,
+    "files.associations": {
+        "*.xdc": "ruby",
+        "*common*.txt": "markdown"
+    },
+    "python.linting.pylintArgs": ["--errors-only"],
+    "matlab.mlintpath": "W:\\MATLAB\\R2017b\\bin\\win64\\mlint.exe",
+    // "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\bash.exe",
+    "latex-workshop.chktex.enabled": true,
+    "workbench.statusBar.visible": true,
+    "editor.minimap.enabled": false,
+    "terminal.integrated.shell.windows": "C:\\windows\\System32\\cmd.exe",
+    "editor.detectIndentation": false
+}
+
+

@@ -1,0 +1,85 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+
+    // ==== Terminal Shortcuts ==== //
+        // toggle focus between terminal and editor
+        {"key": "ctrl+.", "command": "workbench.action.terminal.focus"},
+        {"key": "ctrl+.", "command": "workbench.action.focusActiveEditorGroup",
+                             "when": "terminalFocus"},
+    
+        // create new terminal instance
+        { "key": "ctrl+n", "command":"workbench.action.terminal.new",
+                              "when": "terminalFocus"},
+    
+        // cycle through terminal instances
+        { "key": "ctrl+j", "command": "workbench.action.terminal.focusNext",
+                              "when": "terminalFocus" },
+        { "key": "ctrl+k", "command": "workbench.action.terminal.focusPrevious",
+                              "when": "terminalFocus" },
+    
+        // ctrl+ terminal number
+        { "key": "ctrl+1", "command": "workbench.action.terminal.focusAtIndex1", "when": "terminalFocus"},
+        { "key": "ctrl+2", "command": "workbench.action.terminal.focusAtIndex2", "when": "terminalFocus"},
+        { "key": "ctrl+3", "command": "workbench.action.terminal.focusAtIndex3", "when": "terminalFocus"},
+        { "key": "ctrl+4", "command": "workbench.action.terminal.focusAtIndex4", "when": "terminalFocus"},
+        { "key": "ctrl+5", "command": "workbench.action.terminal.focusAtIndex5", "when": "terminalFocus"},
+        { "key": "ctrl+6", "command": "workbench.action.terminal.focusAtIndex6", "when": "terminalFocus"},
+        { "key": "ctrl+7", "command": "workbench.action.terminal.focusAtIndex7", "when": "terminalFocus"},
+        { "key": "ctrl+8", "command": "workbench.action.terminal.focusAtIndex8", "when": "terminalFocus"},
+        { "key": "ctrl+9", "command": "workbench.action.terminal.focusAtIndex9", "when": "terminalFocus"},
+    
+        // kill terminal window
+        { "key": "ctrl+w", "command": "workbench.action.terminal.kill",
+                              "when": "terminalFocus"},
+    
+    // ==== Editor Commands ==== //
+        // un-split screen (join two groups)
+        { "key": "ctrl+shift+\\", "command": "workbench.action.joinTwoGroups"},
+        
+        { "key": "alt+w", "command": "editor.action.toggleWordWrap" },
+    
+        // scroll up and down
+        // { "key": "ctrl+k", "command": "scrollLineUp",
+        //     "when": "editorTextFocus" },
+        // { "key": "ctrl+j", "command": "scrollLineDown",
+        //     "when": "editorTextFocus" },
+        
+        // cursor up, down, left, right
+        { "key": "alt+j", "command": "cursorDown", "when": "editorTextFocus" },
+        { "key": "alt+k", "command": "cursorUp",   "when": "editorTextFocus" },
+        { "key": "alt+h", "command": "cursorLeft", "when": "editorTextFocus" },
+        { "key": "alt+l", "command": "cursorRight","when": "editorTextFocus" },
+        // jump by word
+        { "key": "alt+ctrl+h", "command": "cursorWordStartLeft", "when": "editorTextFocus" },
+        { "key": "alt+ctrl+l", "command": "cursorWordEndRight", "when": "editorTextFocus" },
+        // jump to begin/end of line
+        { "key": "alt+win+h", "command": "cursorLineStart", "when": "editorTextFocus" },
+        { "key": "alt+win+l", "command": "cursorLineEnd", "when": "editorTextFocus" },
+    
+        // highlight word
+        { "key": "alt+shift+j",  "command": "cursorDownSelect", "when": "editorTextFocus" },
+        { "key": "alt+shift+k", "command": "cursorUpSelect", "when": "editorTextFocus" },
+        { "key": "alt+shift+h", "command": "cursorWordStartLeftSelect", "when": "editorTextFocus" },
+        { "key": "alt+shift+l", "command": "cursorWordEndRightSelect", "when": "editorTextFocus" },
+        
+        // highlight to begin/end of line from cursor
+        { "key": "alt+shift+ctrl+h", "command": "cursorHomeSelect","when": "editorTextFocus" },
+        { "key": "alt+shift+ctrl+l", "command": "cursorEndSelect","when": "editorTextFocus" },
+        
+        // navigating completion suggestions
+        { "key": "ctrl+j", "command": "selectNextSuggestion", 
+                              "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible" },
+        { "key": "ctrl+k", "command": "selectPrevSuggestion", 
+                              "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible" },
+    
+        // delete line
+        //{ "key": "d d", "command": "editor.action.deleteLines", "when": "editorTextFocus && !editorReadonly" }
+            // use "ctrl+shift+k" for now
+    
+        // select all
+        { "key": "ctrl+l", "command": "editor.action.selectAll" }
+    
+    
+    
+    ]
+    
