@@ -7,10 +7,12 @@
         {"key": "ctrl+.", "command": "workbench.action.focusActiveEditorGroup",
                              "when": "terminalFocus"},
     
-        // create new terminal instance
+        // create & kill terminal windows
         { "key": "ctrl+n", "command":"workbench.action.terminal.new",
-                              "when": "terminalFocus"},
-    
+                            "when": "terminalFocus"},
+        { "key": "ctrl+w", "command": "workbench.action.terminal.kill",
+                            "when": "terminalFocus"},
+
         // cycle through terminal instances
         { "key": "ctrl+j", "command": "workbench.action.terminal.focusNext",
                               "when": "terminalFocus" },
@@ -28,9 +30,11 @@
         { "key": "ctrl+8", "command": "workbench.action.terminal.focusAtIndex8", "when": "terminalFocus"},
         { "key": "ctrl+9", "command": "workbench.action.terminal.focusAtIndex9", "when": "terminalFocus"},
     
-        // kill terminal window
-        { "key": "ctrl+w", "command": "workbench.action.terminal.kill",
-                              "when": "terminalFocus"},
+        // tab cycle terminals when focusing terminal
+        { "key": "ctrl+tab",       "command": "workbench.action.terminal.focusNext", "when": "terminalFocus"},
+        { "key": "ctrl+shift+tab", "command": "workbench.action.terminal.focusPrevious", "when": "terminalFocus"},
+
+        
     
     // ==== Editor Commands ==== //
         // un-split screen (join two groups)
