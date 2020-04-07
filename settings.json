@@ -1,17 +1,43 @@
 {
-    "window.zoomLevel": -1,
-    "files.associations": {
-        "*.xdc": "ruby",
-        "*common*.txt": "markdown"
-    },
-    "python.linting.pylintArgs": ["--errors-only"],
-    "matlab.mlintpath": "W:\\MATLAB\\R2017b\\bin\\win64\\mlint.exe",
-    // "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\bash.exe",
-    "latex-workshop.chktex.enabled": true,
-    "workbench.statusBar.visible": true,
-    "editor.minimap.enabled": false,
-    "terminal.integrated.shell.windows": "C:\\windows\\System32\\cmd.exe",
-    "editor.detectIndentation": false
+  // Markdown Settings // 
+  "editor.codeActionsOnSave": {
+    "source.fixAll.markdownlint": true
+  },
+  "markdownlint.config": {
+    "default": true,
+    "MD024": false, // disable error on multiple headings with same name
+    "MD025": false // disable error on multiple top level headings
+  },
+
+  // Latex Settings //
+  "latex-workshop.chktex.enabled": true,
+  "latex-workshop.view.pdf.viewer": "tab",
+  
+  // Python Settings //
+  "python.linting.pylintArgs": ["--errors-only"],
+  "python.dataScience.askForKernelRestart": false,
+
+  // Terminal Settings //
+  "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+  "terminal.integrated.inheritEnv": false,
+  "terminal.integrated.rendererType": "dom",
+
+  // Editor/GUI Settings // 
+  "window.zoomLevel": -1,
+  "files.associations": {
+    "*.xdc": "ruby",
+    "*common*.txt": "markdown"
+  },
+  "workbench.statusBar.visible": true,
+  "workbench.startupEditor": "newUntitledFile",
+  "editor.minimap.enabled": false,
+  "editor.detectIndentation": false,
+  "editor.tabSize": 2,
+  "editor.columnSelection": false,
+  "merge-conflict.diffViewPosition": "Beside",
+  
+  // Update Settings //
+  "update.enableWindowsBackgroundUpdates": false
 }
 
 
