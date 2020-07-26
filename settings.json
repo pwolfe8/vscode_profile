@@ -1,43 +1,64 @@
 {
-  // Markdown Settings // 
-  "editor.codeActionsOnSave": {
-    "source.fixAll.markdownlint": true
-  },
-  "markdownlint.config": {
-    "default": true,
-    "MD024": false, // disable error on multiple headings with same name
-    "MD025": false // disable error on multiple top level headings
-  },
+    // Markdown Settings // 
+    "editor.codeActionsOnSave": {
+      "source.fixAll.markdownlint": true
+    },
+    "markdownlint.config": {
+      "default": true,
+      "MD024": false, // disable error on multiple headings with same name
+      "MD025": false // disable error on multiple top level headings
+    },
 
-  // Latex Settings //
-  "latex-workshop.chktex.enabled": true,
-  "latex-workshop.view.pdf.viewer": "tab",
+    // Latex Settings //
+    "latex-workshop.chktex.enabled": true,
+    "latex-workshop.view.pdf.viewer": "tab",
+    
+    // Python Settings //
+    "python.linting.pylintArgs": ["--errors-only"],
+    "python.dataScience.askForKernelRestart": false,
+
+    // Terminal Settings //
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "terminal.integrated.inheritEnv": false,
+    "terminal.integrated.rendererType": "dom",
+
+    // Editor/GUI Settings // 
+    "editor.columnSelection": false,
+    "window.zoomLevel": -1,
+    "files.associations": {
+      "*.xdc": "ruby",
+      "*common*.txt": "markdown"
+    },
+    "workbench.statusBar.visible": true,
+    "workbench.startupEditor": "newUntitledFile",
+    "editor.minimap.enabled": false,
+    "editor.detectIndentation": false,
+    "editor.tabSize": 2,
+    "merge-conflict.diffViewPosition": "Beside",
+    
+    // Update Settings //
+    "update.enableWindowsBackgroundUpdates": false,
+    "remote.SSH.remotePlatform": {
+      "10.160.13.21": "linux"
+    },
+    
+    // remote settings //
+    "remote.SSH.allowLocalServerDownload": true,
+    "remote.SSH.useLocalServer": false,
+    "remote.downloadExtensionsLocally": true,
+
+    // Data Collection, Telemetry, Online Services // 
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+    "extensions.autoUpdate": false,
+    "extensions.ignoreRecommendations": true,
+    "workbench.enableExperiments": false,
+    "workbench.settings.enableNaturalLanguageSearch": false,
+    "npm.fetchOnlinePackageInfo": false,
+    "json.schemaDownload.enable": false,
+    "pasteImage.showFilePathConfirmInputBox": true,
+      
   
-  // Python Settings //
-  "python.linting.pylintArgs": ["--errors-only"],
-  "python.dataScience.askForKernelRestart": false,
-
-  // Terminal Settings //
-  "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
-  "terminal.integrated.inheritEnv": false,
-  "terminal.integrated.rendererType": "dom",
-
-  // Editor/GUI Settings // 
-  "window.zoomLevel": -1,
-  "files.associations": {
-    "*.xdc": "ruby",
-    "*common*.txt": "markdown"
-  },
-  "workbench.statusBar.visible": true,
-  "workbench.startupEditor": "newUntitledFile",
-  "editor.minimap.enabled": false,
-  "editor.detectIndentation": false,
-  "editor.tabSize": 2,
-  "editor.columnSelection": false,
-  "merge-conflict.diffViewPosition": "Beside",
-  
-  // Update Settings //
-  "update.enableWindowsBackgroundUpdates": false
 }
 
 
