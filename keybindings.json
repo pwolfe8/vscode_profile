@@ -81,9 +81,56 @@
             // use "ctrl+shift+k" for now
     
         // select all
-        { "key": "ctrl+l", "command": "editor.action.selectAll" }
-    
-    
-    
-    ]
+        {
+            "key": "ctrl+l",
+            "command": "editor.action.selectAll"
+        },
+        {
+            "key": "ctrl+t ctrl+u",
+            "command": "editor.action.transformToUppercase"
+        },
+        {
+            "key": "ctrl+t ctrl+l",
+            "command": "editor.action.transformToLowercase"
+        },
+        {
+            "key": "ctrl+t ctrl+t",
+            "command": "editor.action.transformToTitlecase"
+        },
+        {
+            "key": "shift+alt+r",
+            "command": "revealFileInOS",
+            "when": "!editorFocus"
+        },
+        {
+            "key": "shift+alt+r",
+            "command": "-revealFileInOS",
+            "when": "!editorFocus"
+        },
+        {
+            "key": "shift+alt+r",
+            "command": "remote-wsl.revealInExplorer",
+            "when": "editorFocus && remoteName == 'wsl'"
+        },
+        {
+            "key": "shift+alt+r",
+            "command": "-remote-wsl.revealInExplorer",
+            "when": "editorFocus && remoteName == 'wsl'"
+        },
+        {
+            "key": "ctrl+\\",
+            "command": "workbench.action.terminal.split",
+            "when": "terminalFocus && terminalProcessSupported"
+        },
+        {
+            "key": "ctrl+shift+5",
+            "command": "-workbench.action.terminal.split",
+            "when": "terminalFocus && terminalProcessSupported"
+        },
+        {
+            "key": "ctrl+;",
+            "command": "workbench.action.compareEditor.focusOtherSide"
+        }
+
+]
     
