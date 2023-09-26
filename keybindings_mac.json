@@ -1,0 +1,143 @@
+// Place your key bindings in this file to overwrite the defaults
+// Philip Keybindings Mac (cmd and ctrl swapped in OS)
+[
+    // ==== Terminal Shortcuts ==== //
+        // toggle focus between terminal and editor
+        {"key": "cmd+.", "command": "workbench.action.terminal.focus"},
+        {"key": "cmd+.", "command": "workbench.action.focusActiveEditorGroup",
+                             "when": "terminalFocus"},
+    
+        // create & kill terminal windows
+        { "key": "cmd+n", "command":"workbench.action.terminal.new",
+                            "when": "terminalFocus"},
+        { "key": "cmd+w", "command": "workbench.action.terminal.kill",
+                            "when": "terminalFocus"},
+
+        // cycle through terminal instances
+        { "key": "cmd+j", "command": "workbench.action.terminal.focusNext",
+                              "when": "terminalFocus" },
+        { "key": "cmd+k", "command": "workbench.action.terminal.focusPrevious",
+                              "when": "terminalFocus" },
+    
+        // ctrl+ terminal number
+        { "key": "cmd+1", "command": "workbench.action.terminal.focusAtIndex1", "when": "terminalFocus"},
+        { "key": "cmd+2", "command": "workbench.action.terminal.focusAtIndex2", "when": "terminalFocus"},
+        { "key": "cmd+3", "command": "workbench.action.terminal.focusAtIndex3", "when": "terminalFocus"},
+        { "key": "cmd+4", "command": "workbench.action.terminal.focusAtIndex4", "when": "terminalFocus"},
+        { "key": "cmd+5", "command": "workbench.action.terminal.focusAtIndex5", "when": "terminalFocus"},
+        { "key": "cmd+6", "command": "workbench.action.terminal.focusAtIndex6", "when": "terminalFocus"},
+        { "key": "cmd+7", "command": "workbench.action.terminal.focusAtIndex7", "when": "terminalFocus"},
+        { "key": "cmd+8", "command": "workbench.action.terminal.focusAtIndex8", "when": "terminalFocus"},
+        { "key": "cmd+9", "command": "workbench.action.terminal.focusAtIndex9", "when": "terminalFocus"},
+    
+        // tab cycle terminals when focusing terminal
+        { "key": "ctrl+tab",       "command": "workbench.action.terminal.focusNext", "when": "terminalFocus"},
+        { "key": "ctrl+shift+tab", "command": "workbench.action.terminal.focusPrevious", "when": "terminalFocus"},
+
+        
+    
+    // ==== Editor Commands ==== //
+        // mac top of file: ctrl+up 
+        // mac bottom of file: ctrl+down 
+
+        // un-split screen (join two groups)
+        { "key": "cmd+shift+\\", "command": "workbench.action.joinTwoGroups"},
+        
+        // { "key": "alt+w", "command": "editor.action.toggleWordWrap" },
+    
+        // scroll up and down
+        // { "key": "ctrl+k", "command": "scrollLineUp",
+        //     "when": "editorTextFocus" },
+        // { "key": "ctrl+j", "command": "scrollLineDown",
+        //     "when": "editorTextFocus" },
+        
+        // cursor up, down, left, right
+        { "key": "alt+j", "command": "cursorDown", "when": "editorTextFocus" },
+        { "key": "alt+k", "command": "cursorUp",   "when": "editorTextFocus" },
+        { "key": "alt+h", "command": "cursorLeft", "when": "editorTextFocus" },
+        { "key": "alt+l", "command": "cursorRight","when": "editorTextFocus" },
+        // jump by word
+        { "key": "alt+ctrl+h", "command": "cursorWordStartLeft", "when": "editorTextFocus" },
+        { "key": "alt+ctrl+l", "command": "cursorWordEndRight", "when": "editorTextFocus" },
+        // jump to begin/end of line
+        { "key": "alt+cmd+h", "command": "cursorLineStart", "when": "editorTextFocus" },
+        { "key": "alt+cmd+l", "command": "cursorLineEnd", "when": "editorTextFocus" },
+    
+        // highlight word
+        { "key": "alt+ctrl+shift+j",  "command": "cursorDownSelect", "when": "editorTextFocus" },
+        { "key": "alt+ctrl+shift+k", "command": "cursorUpSelect", "when": "editorTextFocus" },
+        { "key": "alt+ctrl+shift+h", "command": "cursorWordStartLeftSelect", "when": "editorTextFocus" },
+        { "key": "alt+ctrl+shift+l", "command": "cursorWordEndRightSelect", "when": "editorTextFocus" },
+        
+        // highlight to begin/end of line from cursor
+        { "key": "alt+cmd+shift+h", "command": "cursorHomeSelect","when": "editorTextFocus" },
+        { "key": "alt+cmd+shift+l", "command": "cursorEndSelect","when": "editorTextFocus" },
+        
+        // navigating completion suggestions 
+        { "key": "alt+j", "command": "selectNextSuggestion", 
+                              "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible" },
+        { "key": "alt+k", "command": "selectPrevSuggestion", 
+                              "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible" },
+    
+        // delete line
+        //{ "key": "d d", "command": "editor.action.deleteLines", "when": "editorTextFocus && !editorReadonly" }
+            // use "ctrl+shift+k" for now
+        
+        {
+            "key": "ctrl+t ctrl+u",
+            "command": "editor.action.transformToUppercase"
+        },
+        {
+            "key": "ctrl+t ctrl+l",
+            "command": "editor.action.transformToLowercase"
+        },
+        {
+            "key": "ctrl+t ctrl+t",
+            "command": "editor.action.transformToTitlecase"
+        },
+        {
+            "key": "shift+alt+r",
+            "command": "revealFileInOS",
+            "when": "!editorFocus"
+        },
+        {
+            "key": "shift+alt+r",
+            "command": "-revealFileInOS",
+            "when": "!editorFocus"
+        },
+        {
+            "key": "shift+alt+r",
+            "command": "remote-wsl.revealInExplorer",
+            "when": "editorFocus && remoteName == 'wsl'"
+        },
+        {
+            "key": "shift+alt+r",
+            "command": "-remote-wsl.revealInExplorer",
+            "when": "editorFocus && remoteName == 'wsl'"
+        },
+        {
+            "key": "ctrl+\\",
+            "command": "workbench.action.terminal.split",
+            "when": "terminalFocus && terminalProcessSupported"
+        },
+        {
+            "key": "ctrl+shift+5",
+            "command": "-workbench.action.terminal.split",
+            "when": "terminalFocus && terminalProcessSupported"
+        },
+        {
+            "key": "cmd+;",
+            "command": "workbench.action.compareEditor.focusOtherSide"
+        },
+
+        // windows redo keybindings
+        {
+            "key": "cmd+y",
+            "command": "redo"
+        },
+        {
+            "key": "shift+cmd+z",
+            "command": "-redo"
+        }
+
+]
